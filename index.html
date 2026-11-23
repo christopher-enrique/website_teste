@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Saudade Beauty – Beleza do Brasil, entregue em Portugal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#FBF7FC;--surface:#fff;--ink:#2A0F36;--muted:#6B5A74;--line:#E7DAEC;--pink:#D81B72;--pink-ink:#fff;--sun:#F6C62F;--sun-ink:#2A0F36;--leaf:#0E6B4F;--soft:#F3E8F6;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1A0B22;--surface:#271233;--ink:#F7EEFA;--muted:#B9A5C3;--line:#40224F;--pink:#FF5FA2;--pink-ink:#2A0F36;--soft:#2F1740;--leaf:#5FD6A8;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#1A0B22;--surface:#271233;--ink:#F7EEFA;--muted:#B9A5C3;--line:#40224F;--pink:#FF5FA2;--pink-ink:#2A0F36;--soft:#2F1740;--leaf:#5FD6A8;color-scheme:dark}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font:17px/1.6 Figtree,system-ui,-apple-system,"Segoe UI",sans-serif}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:10}
+h1,h2,h3{font-family:"Bricolage Grotesque",Figtree,system-ui,sans-serif;line-height:1.08;margin:0;letter-spacing:-.02em}
+h1{font-size:clamp(2.4rem,7vw,4.4rem);font-weight:800}
+h2{font-size:clamp(1.7rem,4vw,2.5rem);font-weight:700}
+h3{font-size:1.2rem;font-weight:700}
+p{margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--pink);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:11;background:var(--bg);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 20px;max-width:1080px;margin:0 auto;flex-wrap:wrap}
+.logo{font:800 1.3rem "Bricolage Grotesque",sans-serif;text-decoration:none;color:var(--ink)}
+.logo span{color:var(--pink)}
+nav{display:flex;gap:4px;flex-wrap:wrap}
+nav a{padding:8px 14px;border-radius:99px;text-decoration:none;font-weight:600;font-size:.95rem;color:var(--muted)}
+nav a:hover{color:var(--ink)}
+nav a[aria-current="page"]{background:var(--ink);color:var(--bg)}
+.btn{display:inline-block;padding:14px 24px;border-radius:99px;font-weight:700;text-decoration:none;border:0;cursor:pointer;font:700 1rem Figtree,sans-serif;background:var(--pink);color:var(--pink-ink)}
+.btn.sun{background:var(--sun);color:var(--sun-ink)}
+.btn.ghost{background:transparent;color:var(--ink);border:2px solid var(--ink)}
+.btn:hover{filter:brightness(1.07)}
+.view{display:none;padding:48px 0 72px}
+.view.on{display:block}
+.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center}
+.hero p.lead{font-size:1.2rem;color:var(--muted);margin:20px 0 28px;max-width:34em}
+.row{display:flex;gap:12px;flex-wrap:wrap}
+.list{background:var(--sun);color:#2A0F36;border-radius:28px;padding:28px 26px;transform:rotate(1.6deg);box-shadow:8px 8px 0 var(--ink)}
+.list h3{margin-bottom:12px}
+.list ul{list-style:none;margin:0;padding:0}
+.list li{display:flex;justify-content:space-between;gap:10px;padding:9px 0;border-bottom:2px dashed rgba(42,15,54,.3);font-weight:600}
+.list li:last-child{border:0}
+.list li b{font-size:.8rem;background:#0E6B4F;color:#fff;border-radius:99px;padding:2px 10px;white-space:nowrap;align-self:center}
+.grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.sec{margin-top:72px}
+.sec>p.sub{color:var(--muted);margin:10px 0 28px;max-width:40em}
+.pain{background:var(--soft);border-radius:24px;padding:24px}
+.pain p{color:var(--muted);margin-top:8px}
+.band{background:var(--ink);color:var(--bg);border-radius:32px;padding:44px 32px;margin-top:72px;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.band p{color:inherit;opacity:.8;margin-top:8px}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin:24px 0}
+.chip{padding:9px 18px;border-radius:99px;border:2px solid var(--line);background:var(--surface);color:var(--ink);font:600 .95rem Figtree,sans-serif;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--pink);border-color:var(--pink);color:var(--pink-ink)}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:20px;display:flex;flex-direction:column;gap:10px}
+.thumb{height:130px;border-radius:16px;display:grid;place-items:center;font-size:3.6rem}
+.card .meta{color:var(--muted);font-size:.92rem;flex:1}
+.price{font:800 1.4rem "Bricolage Grotesque",sans-serif}
+.card .btn{padding:11px 18px;text-align:center;font-size:.95rem}
+.steps{counter-reset:s;display:grid;gap:16px;margin-top:28px}
+.step{display:flex;gap:18px;align-items:flex-start;background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:20px}
+.step::before{counter-increment:s;content:counter(s);flex:none;width:42px;height:42px;border-radius:50%;background:var(--pink);color:var(--pink-ink);display:grid;place-items:center;font:800 1.1rem "Bricolage Grotesque",sans-serif}
+.step p{color:var(--muted)}
+.tbl{overflow-x:auto;margin-top:20px;border:1px solid var(--line);border-radius:20px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:480px}
+th,td{text-align:left;padding:14px 18px;border-bottom:1px solid var(--line)}
+tr:last-child td{border:0}
+th{font-weight:700;background:var(--soft)}
+details{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:16px 20px;margin-top:12px}
+summary{font-weight:700;cursor:pointer}
+details p{color:var(--muted);margin-top:8px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+label{display:block;font-weight:600;margin:14px 0 6px}
+input,textarea,select{width:100%;padding:13px 14px;border-radius:14px;border:2px solid var(--line);background:var(--surface);color:var(--ink);font:inherit}
+textarea{min-height:110px;resize:vertical}
+footer{border-top:1px solid var(--line);padding:28px 20px;text-align:center;color:var(--muted);font-size:.9rem}
+@media (max-width:760px){.hero,.two{grid-template-columns:1fr}.list{transform:none}.view{padding-top:32px}}
+@media (prefers-reduced-motion:no-preference){.view.on{animation:in .35s ease}@keyframes in{from{opacity:0}to{opacity:1}}}
+</style>
+</head>
+<body>
+<header><div class="bar">
+<a class="logo" href="#inicio">Saudade<span>Beauty</span></a>
+<nav aria-label="Principal">
+<a href="#inicio" data-v="inicio">Início</a>
+<a href="#produtos" data-v="produtos">Produtos</a>
+<a href="#entrega" data-v="entrega">Entrega</a>
+<a href="#contacto" data-v="contacto">Contacto</a>
+</nav></div></header>
+
+<main>
+<!-- PÁGINA 1 -->
+<section class="view" id="v-inicio"><div class="wrap">
+<div class="hero">
+<div>
+<h1>Aquele produto que só havia no Brasil, agora na tua porta em Portugal.</h1>
+<p class="lead">Cabelo, pele, corpo e unhas: os produtos de beleza brasileiros que você procura em vão nas lojas daqui, com envio para todo o país.</p>
+<div class="row"><a class="btn" href="#produtos">Ver produtos</a><a class="btn ghost" href="#entrega">Como funciona a entrega</a></div>
+</div>
+<aside class="list" aria-label="Exemplos de produtos">
+<h3>A lista de saudades</h3>
+<ul>
+<li>Máscara de hidratação 500 g <b>Em stock</b></li>
+<li>Ativador de cachos <b>Em stock</b></li>
+<li>Protetor solar facial FPS 50 <b>Em stock</b></li>
+<li>Esmaltes cremosos <b>Em stock</b></li>
+<li>Creme corporal de cupuaçu <b>Em stock</b></li>
+</ul></aside>
+</div>
+
+<div class="sec">
+<h2>Você já passou por isto?</h2>
+<p class="sub">Quem mudou do Brasil para Portugal conhece bem.</p>
+<div class="grid">
+<div class="pain"><h3>Cabelo diferente</h3><p>Os produtos locais não foram feitos para cachos e ondas, e o resultado nunca é o mesmo.</p></div>
+<div class="pain"><h3>Lojas que não têm</h3><p>Anda de loja em loja e acaba por encomendar de fora, com taxas e semanas de espera.</p></div>
+<div class="pain"><h3>Preços que assustam</h3><p>Importar um frasco sai caro. Aqui você paga em euros e com portes claros.</p></div>
+</div></div>
+
+<div class="band">
+<div><h2>Comece pelo kit mais pedido</h2><p>Kit Cachos Definidos: shampoo, máscara e ativador.</p></div>
+<a class="btn sun" href="#produtos">Escolher o meu kit</a>
+</div>
+</div></section>
+
+<!-- PÁGINA 2 -->
+<section class="view" id="v-produtos"><div class="wrap">
+<h2>Produtos do Brasil em stock</h2>
+<p style="color:var(--muted);margin-top:10px">Escolha a categoria e peça pelo WhatsApp. Confirmamos disponibilidade e combinamos o pagamento.</p>
+<div class="chips" id="chips" role="group" aria-label="Filtrar por categoria"></div>
+<div class="grid" id="prods"></div>
+</div></section>
+
+<!-- PÁGINA 3 -->
+<section class="view" id="v-entrega"><div class="wrap">
+<h2>Da nossa prateleira à sua casa</h2>
+<p style="color:var(--muted);margin-top:10px;max-width:40em">Sem complicação: você escolhe, nós separamos e enviamos.</p>
+<div class="steps">
+<div class="step"><div><h3>Escolha no site</h3><p>Veja os produtos e clique em “Pedir no WhatsApp” para falar connosco.</p></div></div>
+<div class="step"><div><h3>Confirmamos o pedido</h3><p>Verificamos o stock, calculamos os portes e enviamos os dados de pagamento.</p></div></div>
+<div class="step"><div><h3>Receba em casa</h3><p>Enviamos por CTT ou transportadora, com código de rastreio.</p></div></div>
+</div>
+<div class="sec" style="margin-top:48px">
+<h3>Portes de envio</h3>
+<div class="tbl"><table>
+<tr><th>Destino</th><th>Prazo</th><th>Portes</th></tr>
+<tr><td>Portugal continental</td><td>2 a 4 dias úteis</td><td>€3,90 (grátis acima de €45)</td></tr>
+<tr><td>Madeira e Açores</td><td>4 a 7 dias úteis</td><td>€6,90</td></tr>
+</table></div></div>
+<div class="sec" style="margin-top:48px">
+<h3>Dúvidas frequentes</h3>
+<details><summary>Os produtos são originais?</summary><p>Sim. Compramos de distribuidores no Brasil e guardamos tudo com cuidado até ao envio.</p></details>
+<details><summary>Posso pagar por MB Way?</summary><p>Sim. Aceitamos MB Way e transferência bancária.</p></details>
+<details><summary>E se o produto chegar danificado?</summary><p>Mande uma foto em até 48 horas e fazemos a troca ou o reembolso.</p></details>
+</div>
+</div></section>
+
+<!-- PÁGINA 4 -->
+<section class="view" id="v-contacto"><div class="wrap">
+<div class="two">
+<div>
+<h2>Somos como você: brasileiros longe de casa</h2>
+<p style="color:var(--muted);margin-top:16px">A Saudade Beauty nasceu da mesma dificuldade que você tem: não encontrar o creme, a máscara ou o esmalte de sempre. Hoje trazemos esses produtos para quem vive em Portugal.</p>
+<p style="color:var(--muted);margin-top:12px">Procura algo que não está na lista? Diga-nos o nome e tentamos trazer.</p>
+</div>
+<div>
+<h3>Mande a sua encomenda</h3>
+<label for="n">O seu nome</label><input id="n" autocomplete="name">
+<label for="c">Cidade em Portugal</label><input id="c" autocomplete="address-level2">
+<label for="m">O que você procura?</label><textarea id="m" placeholder="Ex.: 2 máscaras de hidratação e 1 ativador de cachos"></textarea>
+<p style="margin-top:18px"><button class="btn" type="button" id="send">Enviar pelo WhatsApp</button></p>
+</div>
+</div>
+</div></section>
+</main>
+<footer>© 2026 Saudade Beauty. Preços e prazos de exemplo, ajuste antes de publicar.</footer>
+
+<script>
+var WA="351900000000";
+var P=[
+["Kit Cachos Definidos","Cabelo","Shampoo, máscara e ativador",24.90,"🌀","#F6C62F"],
+["Máscara de Hidratação 500 g","Cabelo","Para cabelos secos e quimicamente tratados",16.90,"💜","#E7C8F2"],
+["Óleo Capilar Nutritivo","Cabelo","Brilho e controlo do frizz",12.90,"✨","#FFD9A8"],
+["Creme Corporal de Cupuaçu","Corpo","Hidratação intensa por 24 horas",14.90,"🥥","#CDEBDD"],
+["Protetor Solar Facial FPS 50","Rosto","Toque seco, sem deixar a pele branca",15.90,"☀️","#FFE59A"],
+["Kit de Esmaltes Cremosos","Unhas","5 cores populares no Brasil",11.90,"💅","#FFC4DD"]
+];
+var cat="Todos",cats=["Todos","Cabelo","Corpo","Rosto","Unhas"];
+function eur(n){return "€"+n.toFixed(2).replace(".",",")}
+function wa(t){return "https://wa.me/"+WA+"?text="+encodeURIComponent(t)}
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+function render(){
+ var c=document.getElementById("chips");
+ c.innerHTML=cats.map(function(k){return '<button type="button" class="chip" aria-pressed="'+(k===cat)+'" data-k="'+k+'">'+k+'</button>'}).join("");
+ document.getElementById("prods").innerHTML=P.filter(function(p){return cat==="Todos"||p[1]===cat}).map(function(p){
+  return '<article class="card"><div class="thumb" style="background:'+p[5]+'" aria-hidden="true">'+p[4]+'</div><h3>'+esc(p[0])+'</h3><p class="meta">'+esc(p[2])+'</p><div class="price">'+eur(p[3])+'</div><a class="btn" target="_blank" rel="noopener" href="'+wa("Olá! Quero encomendar: "+p[0])+'">Pedir no WhatsApp</a></article>'}).join("");
+}
+document.getElementById("chips").addEventListener("click",function(e){var k=e.target.getAttribute("data-k");if(k){cat=k;render()}});
+document.getElementById("send").addEventListener("click",function(){
+ var n=document.getElementById("n").value,c=document.getElementById("c").value,m=document.getElementById("m").value;
+ window.open(wa("Olá! Sou "+(n||"cliente")+(c?", de "+c:"")+". Gostava de encomendar: "+(m||"(diga-me o que precisa)")),"_blank","noopener");
+});
+var V=["inicio","produtos","entrega","contacto"];
+function route(){
+ var h=location.hash.replace("#","");if(V.indexOf(h)<0)h="inicio";
+ V.forEach(function(v){
+  document.getElementById("v-"+v).classList.toggle("on",v===h);
+  var a=document.querySelector('nav a[data-v="'+v+'"]');
+  if(v===h)a.setAttribute("aria-current","page");else a.removeAttribute("aria-current");
+ });
+ window.scrollTo(0,0);
+}
+window.addEventListener("hashchange",route);
+render();route();
+</script>
+</body>
+</html>
